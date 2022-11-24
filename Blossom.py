@@ -1,3 +1,4 @@
+from linked_list import Node, LinkedList
 class HashMap:
     def __init__(self, size) -> None:
         self.array_size = size
@@ -21,5 +22,3 @@ class HashMap:
                 return payload[1]
         elif payload == None or payload[0] != key:
             return None
-
-
