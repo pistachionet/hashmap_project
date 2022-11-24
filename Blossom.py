@@ -17,7 +17,7 @@ class HashMap:
         list_at_array = self.array[array_index]
         for i in list_at_array:
             if i[0] == key:
-                i[1] = [key, value]
+                i[1] = value
         self.array[array_index] = [key, value]
 
     def retrieve(self, key):
