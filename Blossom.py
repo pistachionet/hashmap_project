@@ -17,8 +17,7 @@ class HashMap:
     def retrieve(self, key):
         array_index = self.compress((self.hash(key)))
         payload = self.array[array_index]
-        if payload != None:
-            if payload[0] == key:
+        if payload != None or payload[0] == key:
                 return payload[1]
         elif payload == None or payload[0] != key:
             return None
