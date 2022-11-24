@@ -13,6 +13,11 @@ class HashMap:
 
     def assign(self, key, value):
         array_index = self.compress(self.hash(key))
+        payload = Node([key,value])
+        list_at_array = self.array[array_index]
+        for i in list_at_array:
+            if i[0] == key:
+                i[1] = [key, value]
         self.array[array_index] = [key, value]
 
     def retrieve(self, key):
