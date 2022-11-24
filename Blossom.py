@@ -18,12 +18,12 @@ class HashMap:
         for i in list_at_array:
             if i[0] == key:
                 i[1] = value
-        self.array[array_index] = [key, value]
+        list_at_array.insert(payload)
 
     def retrieve(self, key):
         array_index = self.compress((self.hash(key)))
-        payload = self.array[array_index]
-        if payload != None or payload[0] == key:
-                return payload[1]
-        elif payload == None or payload[0] != key:
-            return None
+        list_at_index = self.array[array_index]
+        for i in list_at_index:
+            if i[0] == key:
+                return i[1]
+        return None
