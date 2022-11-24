@@ -1,8 +1,8 @@
-from linked_list import Node, LinkedList
+from linkedlist import Node, LinkedList
 class HashMap:
     def __init__(self, size) -> None:
         self.array_size = size
-        self.array = [None] * size #list of none objects of length size 
+        self.array = [LinkedList() for i in range(self.array_size)] #list of none objects of length size 
 
 
     def hash(self, key):
