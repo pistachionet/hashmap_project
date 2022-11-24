@@ -10,5 +10,10 @@ class HashMap:
     def compress(self, hash_code):
         return hash_code % self.array_size 
 
-ddsds
+    def assign(self, key, value):
+        array_index = self.compress(hash(key))
+        self.array[array_index] = [key, value]
+
+        
+
 
