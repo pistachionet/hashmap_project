@@ -34,3 +34,15 @@ class HashMap:
 blossom = HashMap(len(flower_definitions))
 for flower in flower_definitions:
     blossom.assign(flower[0],flower[1])
+
+first = blossom.retrieve('daisy')
+print(first)
+second = blossom.retrieve('rose')
+print(second)
+third = blossom.retrieve('patigonia')
+print(third)
+
+blossom.assign('patigonia', 'rest')
+
+fourth = blossom.retrieve('patigonia')
+print(third)
